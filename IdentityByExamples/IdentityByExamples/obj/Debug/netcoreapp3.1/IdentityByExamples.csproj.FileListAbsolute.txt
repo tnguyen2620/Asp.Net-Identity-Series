@@ -132,3 +132,4 @@ C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\Ident
 C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\obj\Debug\netcoreapp3.1\IdentityByExamples.dll
 C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\obj\Debug\netcoreapp3.1\IdentityByExamples.pdb
 C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\obj\Debug\netcoreapp3.1\IdentityByExamples.genruntimeconfig.cache
+C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
