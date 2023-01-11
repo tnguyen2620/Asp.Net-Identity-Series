@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\james\\Documents\\dotnet\\code-maze-identity-aspnetcore\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj": {}
+    "C:\\Users\\Thanh\\Documents\\dotnet\\Asp.Net-Identity-Series\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj": {}
   },
   "projects": {
-    "C:\\Users\\james\\Documents\\dotnet\\code-maze-identity-aspnetcore\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj": {
+    "C:\\Users\\Thanh\\Documents\\dotnet\\Asp.Net-Identity-Series\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\james\\Documents\\dotnet\\code-maze-identity-aspnetcore\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj",
+        "projectUniqueName": "C:\\Users\\Thanh\\Documents\\dotnet\\Asp.Net-Identity-Series\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj",
         "projectName": "IdentityByExamples",
-        "projectPath": "C:\\Users\\james\\Documents\\dotnet\\code-maze-identity-aspnetcore\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj",
-        "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\james\\Documents\\dotnet\\code-maze-identity-aspnetcore\\IdentityByExamples\\IdentityByExamples\\obj\\",
+        "projectPath": "C:\\Users\\Thanh\\Documents\\dotnet\\Asp.Net-Identity-Series\\IdentityByExamples\\IdentityByExamples\\IdentityByExamples.csproj",
+        "packagesPath": "C:\\Users\\Thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thanh\\Documents\\dotnet\\Asp.Net-Identity-Series\\IdentityByExamples\\IdentityByExamples\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,20 +76,8 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[3.1.32, 3.1.32]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
