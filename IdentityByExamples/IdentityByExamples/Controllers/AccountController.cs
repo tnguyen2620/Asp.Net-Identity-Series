@@ -12,11 +12,13 @@ namespace IdentityByExamples.Controllers
     {
         private readonly IMapper _mapper;
         private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
 
-        public AccountController(IMapper mapper, UserManager<User> userManager)
+        public AccountController(IMapper mapper, UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _mapper = mapper;
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
 
@@ -64,21 +66,10 @@ namespace IdentityByExamples.Controllers
             {
                 return View(userModel);
             }
-            //find user in the database with the same email. 
-            var user = await _userManager.FindByEmailAsync(userModel.Email);
-            // if that user exists and password match, create ClaimsIdentity object and add a couple of claims
-            if (user != null &&
-                await _userManager.CheckPasswordAsync(user, userModel.Password))
+            //Sign in with the PasswordSignInAsync method from SignInManager service. 
+            var result = await _signInManager.PasswordSignInAsync(userModel.Email, userModel.Password, userModel.RememberMe, false);
+            if (result.Succeeded)
             {
-                var identity = new ClaimsIdentity(IdentityConstants.ApplicationScheme);
-                // user id as NameIdentifier claim
-                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.Id));
-                // username as name claim. 
-                identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
-                //sign the user in with SignInAsync method. This will create the Identity.Application cookie in our browser
-                await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme,
-                    new ClaimsPrincipal(identity));
-                //return RedirectToAction(nameof(HomeController.Index), "Home");
                 return RedirectToLocal(returnUrl);
             }
             else
