@@ -78,6 +78,17 @@ namespace IdentityByExamples.Controllers
                 return View();
             }
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            //user the SignOutAsync method by the SignInManager service and redirect to Home/Index
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(HomeController.Index), "Home");
+        }
+
         //Method that redirect the user after login to appropriate location
         private IActionResult RedirectToLocal(string returnUrl)
         {
