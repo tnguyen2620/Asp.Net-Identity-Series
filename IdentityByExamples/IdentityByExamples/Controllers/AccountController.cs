@@ -49,14 +49,15 @@ namespace IdentityByExamples.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login(string returnUrl = null)
         {
+            ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(UserLoginModel userModel)
+        public async Task<IActionResult> Login(UserLoginModel userModel, string returnUrl = null)
         {
             //check if the ModelState is valid, if not return to the view
             if (!ModelState.IsValid)
@@ -77,7 +78,8 @@ namespace IdentityByExamples.Controllers
                 //sign the user in with SignInAsync method. This will create the Identity.Application cookie in our browser
                 await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme,
                     new ClaimsPrincipal(identity));
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                //return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToLocal(returnUrl);
             }
             else
             {
@@ -85,5 +87,16 @@ namespace IdentityByExamples.Controllers
                 return View();
             }
         }
+        //Method that redirect the user after login to appropriate location
+        private IActionResult RedirectToLocal(string returnUrl)
+        {
+            if (Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
+            else
+                return RedirectToAction(nameof(HomeController.Index), "Home");
+
+        }
+
+
     }
 }
