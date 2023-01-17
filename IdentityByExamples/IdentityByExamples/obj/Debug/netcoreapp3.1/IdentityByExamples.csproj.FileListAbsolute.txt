@@ -141,3 +141,4 @@ C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\Ident
 C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\Thanh\Documents\dotnet\Asp.Net-Identity-Series\IdentityByExamples\IdentityByExamples\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

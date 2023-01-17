@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IdentityByExamples"
+    "\\IdentityByExamples",
+    "\\IdentityByExamples\\IdentityByExamples",
+    "\\IdentityByExamples\\IdentityByExamples\\Controllers"
   ],
-  "SelectedNode": "\\IdentityByExamples\\IdentityByExamples.sln",
+  "SelectedNode": "\\IdentityByExamples\\IdentityByExamples\\Controllers\\AccountController.cs",
   "PreviewInSolutionExplorer": false
 }
