@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityByExamples.Factory;
 using IdentityByExamples.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +40,7 @@ namespace IdentityByExamples
             }).AddEntityFrameworkStores<ApplicationContext>();
             services.AddControllersWithViews();
             services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<IUserClaimsPrincipalFactory<User>, CustomClaimsFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
